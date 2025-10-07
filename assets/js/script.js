@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+    // makes it possible to submit answer with enter-key.
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if(event.key === "Enter") {
+            checkAnswer();
+        }
+    });
 
     runGame("addition");
 
